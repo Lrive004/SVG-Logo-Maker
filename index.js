@@ -1,10 +1,17 @@
+import Shape from './lib/shapes.js';
 import fs from 'fs';
 import inquirer from 'inquirer';
+
+
+function createFile(fileName, data) {
+    fs.writeFile(fileName, data, (err) => err ? console.log(err) :
+        console.log('Generated logo.svg'));
+};
 
 inquirer
     .prompt([{
         type: 'input',
-        name: 'text-color',
+        name: 'textColor',
         message: 'Please enter a text color(OR a hexadecimal number): ',
     },
     {
@@ -13,27 +20,24 @@ inquirer
         name: 'shape',
         choices: [
             {
-                name: 'circle',
+                name: 'Circle',
             },
             {
-                name: 'triangle',
+                name: 'Triangle',
             },
             {
-                name: 'square',
+                name: 'Square',
             },]
 
     },
     {
         type: 'input',
-        name: 'shape-color',
+        name: 'shapeColor',
         message: 'Please enter a shape color(OR a hexadecimal number): ',
     },
     ])
     .then((data) => {
-        const filename = 'logo.svg';
-        createFile(filename, data);
+        const fileName = 'logo.svg';
+        const content = shape.render();
+        let shape;
     })
-
-function createFile(fileName, data) {
-    fs.writeFile(fileName, data, (err) => err ? console.log(err) : console.log('Generated logo.svg'));
-};
