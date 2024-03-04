@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "GIVEN a command-line application that accepts user input\r WHEN I am prompted for text\r THEN I can enter up to three characters",
   "main": "index.js",
-  "type":"module",
+  "type": "module",
   "directories": {
     "example": "examples",
     "lib": "lib"
@@ -15,5 +15,8 @@
   "license": "ISC",
   "dependencies": {
     "inquirer": "^9.2.15"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
   }
 }
