@@ -1,4 +1,4 @@
-import Shape from './lib/shapes.js';
+import { Shape, Triangle, Circle, Square } from './lib/shapes.js';
 import fs from 'fs';
 import inquirer from 'inquirer';
 
@@ -10,6 +10,17 @@ function createFile(fileName, data) {
 
 inquirer
     .prompt([{
+        type: 'input',
+        name: 'text',
+        message: "Please enter up to three characters",
+        validate: function (input) {
+            if (input.length > 3) {
+                return 'Please enter up to 3 characters.';
+            }
+            return true;
+        }
+    },
+    {
         type: 'input',
         name: 'textColor',
         message: 'Please enter a text color(OR a hexadecimal number): ',
@@ -37,7 +48,27 @@ inquirer
     },
     ])
     .then((data) => {
+        const text = {
+            content: data.text,
+            color: data.textColor
+        };
+
+        let shape;
+        switch (data.shape) {
+            case 'Triangle':
+                shape = new Triangle(data.shapeColor, data.shape, text);
+                break;
+            case 'Circle':
+                shape = new Circle(data.shapeColor, data.shape, text);
+                break;
+            case 'Square':
+                shape = new Square(data.shapeColor, data.shape, text);
+                break;
+            default:
+                console.log('Unrecognizable shape');
+                return;
+        }
         const fileName = 'logo.svg';
         const content = shape.render();
-        let shape;
-    })
+        createFile(fileName, content);
+    });
