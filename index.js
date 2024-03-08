@@ -1,4 +1,4 @@
-import { Shape, Triangle, Circle, Square } from './lib/shapes.js';
+import { Shape, Triangle, Circle, Square } from './lib/shapes';
 import fs from 'fs';
 import inquirer from 'inquirer';
 
