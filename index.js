@@ -1,6 +1,10 @@
-import { Shape, Triangle, Circle, Square } from './lib/shapes';
-import fs from 'fs';
-import inquirer from 'inquirer';
+// import { Shape, Triangle, Circle, Square } from '../lib/shapes';
+// import fs from 'fs';
+// import inquirer from 'inquirer';
+
+const {Shape, Triangle, Circle, Square} = require('../lib/shapes');
+const fs = require('fs/promises');
+const inquirer = require('inquirer');
 
 
 function createFile(fileName, data) {

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "GIVEN a command-line application that accepts user input\r WHEN I am prompted for text\r THEN I can enter up to three characters",
   "main": "index.js",
-  "type": "module",
+  "type": "commonjs",
   "directories": {
     "example": "examples",
     "lib": "lib"
