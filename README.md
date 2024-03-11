@@ -2,7 +2,7 @@
   ## About Application
   This application is a SVG logo maker that accepts user input to dynamically create a custom SVG. By using 'node index.js' the user can call the app and begin creating their own SVG. The user will first be prompted for 3 text characters they would like to be displayed, following up with the text's color. After doing so, the program will then ask to select a shape from a list of, trinagle, circle and square. Finally, it will ask for the color that will fill in the shape. Once, all prompts have been answered a 'logo.svg' file will be dynamically created and the custom svg will be populated within the file.
 
-  The following link displays the functionality of te application: https://drive.google.com/file/d/1x6Rul8JhXPYyUBX3pu0N5PbJDwOMLOa9/view
+  The following link displays the functionality of the application: https://drive.google.com/file/d/1x6Rul8JhXPYyUBX3pu0N5PbJDwOMLOa9/view
   
   <img width="98" alt="image" src="https://github.com/Lrive004/SVG-Logo-Maker/assets/112648247/383855f4-b837-4b0e-b622-1a311fe3cb43">
 
